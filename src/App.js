@@ -2,6 +2,8 @@ import { useState } from 'react';
 import './App.css';
 import tanya from './images/image-tanya.jpg';
 import john from './images/image-john.jpg';
+import iconnext from './images/icon-next.svg';
+import iconprev from './images/icon-prev.svg';
 
 const data = [
   {
@@ -29,19 +31,35 @@ function App() {
   return (
     <>
       <main>
-        <div className="content">{data[i].content}</div>
+        <div className="content">
+          <p>{data[i].content}</p>
+
+          <div class="name-posiiton">
+            <b class="name">{data[i].name}</b> <span>{data[i].job}</span>
+          </div>
+        </div>
         <div className="image">
           <img src={data[i].image} alt="" />
-          {i === 0 ? (
-            <button disabled>back</button>
-          ) : (
-            <button onClick={() => setI(i - 1)}>back</button>
-          )}
-          {i < data.length - 1 ? (
-            <button onClick={() => setI(i + 1)}>next</button>
-          ) : (
-            <button disabled>next</button>
-          )}
+          <div className="btn">
+            {i === 0 ? (
+              <button className="back" disabled>
+                <img src={iconprev} alt="" />
+              </button>
+            ) : (
+              <button className="back" onClick={() => setI(i - 1)}>
+                <img src={iconprev} alt="" />
+              </button>
+            )}
+            {i < data.length - 1 ? (
+              <button className="next" onClick={() => setI(i + 1)}>
+                <img src={iconnext} alt="" />
+              </button>
+            ) : (
+              <button className="next" disabled>
+                <img src={iconnext} alt="" />
+              </button>
+            )}
+          </div>
         </div>
       </main>
     </>
