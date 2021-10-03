@@ -18,13 +18,8 @@ body {
   justify-content: center;
 }
 main {
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
-
   width: 1100px;
   height: 540px;
-
   position: relative;
 }
 .image > img {
@@ -32,8 +27,7 @@ main {
   right: 0;
   top: 0;
 
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
-    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  box-shadow: hsl(240, 9%, 58%) 0px 25px 25px -20px;
 }
 .btn {
   position: absolute;
@@ -77,9 +71,8 @@ main {
 
 @media screen and (max-width: 414px) {
   body {
-    background-position: center 9%, left bottom;
+    background-position: center 7.6%, left bottom;
     background-size: 340px;
-    height: 100vh;
   }
   main {
     width: 0;
@@ -90,12 +83,6 @@ main {
     align-items: center;
     justify-content: center;
   }
-
-  .name-posiiton {
-    font-size: 16px;
-    display: flex;
-    flex-direction: column;
-  }
   .image {
     position: relative;
   }
@@ -105,15 +92,9 @@ main {
     margin-top: 4.28rem;
   }
   .btn {
-    position: absolute;
-    z-index: 2;
-    bottom: -4%;
     right: 50%;
     transform: translate(50%, 0);
-    background: #fff;
-    border-radius: 25px;
   }
-
   .content {
     text-align: center;
     background-position: center 18%;
@@ -121,5 +102,10 @@ main {
     position: static;
     font-size: 20px;
     width: 300px;
+  }
+  .name-posiiton {
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
   }
 }
