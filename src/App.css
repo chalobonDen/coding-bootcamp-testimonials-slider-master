@@ -18,9 +18,9 @@ body {
   justify-content: center;
 }
 main {
-  display: flex;
+  /* display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
 
   width: 1100px;
   height: 540px;
@@ -42,6 +42,7 @@ main {
   right: 35%;
   background: #fff;
   border-radius: 25px;
+  width: fit-content;
 }
 .btn button {
   border: none;
@@ -76,15 +77,49 @@ main {
 
 @media screen and (max-width: 414px) {
   body {
-    /* background-image: url('./images/pattern-bg.svg'),
-      url('./images/pattern-curve.svg');
-    background-repeat: no-repeat;
-    background-position: 83% 39%, left bottom; */
-
+    background-position: center 9%, left bottom;
+    background-size: 340px;
     height: 100vh;
+  }
+  main {
+    width: 0;
+    height: 100vh;
+    position: static;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .name-posiiton {
+    font-size: 16px;
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
-    /* justify-content: center; */
+  }
+  .image {
+    position: relative;
+  }
+  .image > img {
+    width: 262px;
+    position: static;
+    margin-top: 4.28rem;
+  }
+  .btn {
+    position: absolute;
+    z-index: 2;
+    bottom: -4%;
+    right: 50%;
+    transform: translate(50%, 0);
+    background: #fff;
+    border-radius: 25px;
+  }
+
+  .content {
+    text-align: center;
+    background-position: center 18%;
+    background-size: 70px;
+    position: static;
+    font-size: 20px;
+    width: 300px;
   }
 }
