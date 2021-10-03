@@ -1,5 +1,7 @@
 # Frontend Mentor - Coding bootcamp testimonials slider
 
+[Preview Site](https://quizzical-poitras-fb08c8.netlify.app/)
+
 ![Design preview for the Coding bootcamp testimonials slider coding challenge](./design/desktop-preview.jpg)
 
 ## Welcome! 👋
