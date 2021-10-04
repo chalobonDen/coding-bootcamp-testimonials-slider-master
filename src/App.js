@@ -42,20 +42,28 @@ function App() {
           <img src={data[i].image} alt="" />
           <div className="btn">
             {i === 0 ? (
-              <button className="back" disabled>
+              <button className="back" aria-label="back-disable" disabled>
                 <img src={iconprev} alt="" />
               </button>
             ) : (
-              <button className="back" onClick={() => setI(i - 1)}>
+              <button
+                className="back"
+                aria-label="back"
+                onClick={() => setI(i - 1)}
+              >
                 <img src={iconprev} alt="" />
               </button>
             )}
             {i < data.length - 1 ? (
-              <button className="next" onClick={() => setI(i + 1)}>
+              <button
+                className="next"
+                aria-label="next"
+                onClick={() => setI(i + 1)}
+              >
                 <img src={iconnext} alt="" />
               </button>
             ) : (
-              <button className="next" disabled>
+              <button className="next" aria-label="next-disable" disabled>
                 <img src={iconnext} alt="" />
               </button>
             )}
